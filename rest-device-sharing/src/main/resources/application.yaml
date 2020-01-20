@@ -1,0 +1,15 @@
+spring:
+  main.banner-mode: off
+
+  data:
+    mongodb:
+      port: 27017
+      host: localhost
+      authentication-database: device_db
+      username: admin
+      password: admin123
+      database: device_db
+
+phonoapi:
+  token: 396d5f536e32af7f1456ca298a54384bd71830072ec1d7b1
+  url: https://fonoapi.freshpixl.com/v1

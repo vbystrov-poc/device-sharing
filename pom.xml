@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" 
+    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.udavpit.device-sharing</groupId>
+    <artifactId>device-sharing</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Device Sharing :: ROOT</name>
+
+    <modules>
+        <module>rest-device-sharing</module>
+    </modules>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <finalName>device-sharing</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <runOnlyAtExecutionRoot>true</runOnlyAtExecutionRoot>
+                    <attach>false</attach>
+                    <descriptors>
+                        <descriptor>assembly.xml</descriptor>
+                    </descriptors>
+                    <outputDirectory>dist</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

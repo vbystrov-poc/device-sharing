@@ -1,0 +1,13 @@
+version: "3"
+services:
+  mongo:
+    image: "mongo:4.2.2"
+    container_name: "device_database"
+    environment:
+      MONGO_INITDB_DATABASE: device_db
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+    volumes:
+      - ./db-init/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+    ports:
+      - 27017:27017
